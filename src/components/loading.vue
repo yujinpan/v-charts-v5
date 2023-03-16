@@ -3,7 +3,7 @@
     <div class="loader">
       <div class="loading-spinner">
         <svg class="circular" viewBox="25 25 50 50">
-          <circle class="path" cx="50" cy="50" r="20" fill="none"/>
+          <circle class="path" cx="50" cy="50" r="20" fill="none" />
         </svg>
       </div>
     </div>
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .v-charts-mask-status {
@@ -35,7 +35,7 @@
 
 .v-charts-component-loading .path {
   animation: loading-dash 1.5s ease-in-out infinite;
-  stroke-dasharray: 90,150;
+  stroke-dasharray: 90, 150;
   stroke-dashoffset: 0;
   stroke-width: 2;
   stroke: #20a0ff;

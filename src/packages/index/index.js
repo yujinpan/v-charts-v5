@@ -1,23 +1,23 @@
-import VeBar from '../bar'
-import VeHistogram from '../histogram'
-import VeLine from '../line'
-import VePie from '../pie'
-import VeRing from '../ring'
-import VeWaterfall from '../waterfall'
-import VeFunnel from '../funnel'
-import VeRadar from '../radar'
-import VeChart from '../chart'
-import VeMap from '../map'
-import VeBmap from '../bmap'
-import VeAmap from '../amap'
-import VeSankey from '../sankey'
-import VeHeatmap from '../heatmap'
-import VeScatter from '../scatter'
-import VeCandle from '../candle'
-import VeGauge from '../gauge'
-import VeTree from '../tree'
-import VeLiquidfill from '../liquidfill'
-import VeWordcloud from '../wordcloud'
+import VeAmap from '../amap';
+import VeBar from '../bar';
+import VeBmap from '../bmap';
+import VeCandle from '../candle';
+import VeChart from '../chart';
+import VeFunnel from '../funnel';
+import VeGauge from '../gauge';
+import VeHeatmap from '../heatmap';
+import VeHistogram from '../histogram';
+import VeLine from '../line';
+import VeLiquidfill from '../liquidfill';
+import VeMap from '../map';
+import VePie from '../pie';
+import VeRadar from '../radar';
+import VeRing from '../ring';
+import VeSankey from '../sankey';
+import VeScatter from '../scatter';
+import VeTree from '../tree';
+import VeWaterfall from '../waterfall';
+import VeWordcloud from '../wordcloud';
 
 const components = [
   VeBar,
@@ -39,17 +39,17 @@ const components = [
   VeGauge,
   VeTree,
   VeLiquidfill,
-  VeWordcloud
-]
+  VeWordcloud,
+];
 
-function install (Vue, _) {
-  components.forEach(component => {
-    Vue.component(component.name, component)
-  })
+function install(Vue, _) {
+  components.forEach((component) => {
+    Vue.component(component.name, component);
+  });
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue)
+  install(window.Vue);
 }
 
 export default {
@@ -72,5 +72,5 @@ export default {
   VeTree,
   VeLiquidfill,
   VeWordcloud,
-  install
-}
+  install,
+};

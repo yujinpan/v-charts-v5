@@ -1,79 +1,58 @@
-import {
-  isObject,
-  isArray
-} from 'utils-lite'
+import { isObject, isArray } from 'utils-lite';
 
-import {
-  getFormated
-} from '../../utils'
+import { getFormated } from '../../utils';
 
-function getTooltip (args) {
-  const {
-    tooltipFormatter,
-    dataType,
-    digit
-  } = args
+function getTooltip(args) {
+  const { tooltipFormatter, dataType, digit } = args;
 
   return {
     show: true,
-    formatter (options) {
-      const {
-        seriesName,
-        value
-      } = options
+    formatter(options) {
+      const { seriesName, value } = options;
       if (tooltipFormatter) {
-        return tooltipFormatter.apply(null, arguments)
+        return tooltipFormatter.apply(null, arguments);
       }
 
-      return [
-        `${seriesName}: `,
-        getFormated(value, dataType, digit)
-      ].join('')
-    }
-  }
+      return [`${seriesName}: `, getFormated(value, dataType, digit)].join('');
+    },
+  };
 }
 
-function getSeries (args) {
-  const {
-    dimension,
-    metrics,
-    seriesMap,
-    rows,
-    wave
-  } = args
+function getSeries(args) {
+  const { dimension, metrics, seriesMap, rows, wave } = args;
 
-  let itemWave = wave
-  let len = isArray(seriesMap) ? seriesMap.length : 0
+  let itemWave = wave;
+  const len = isArray(seriesMap) ? seriesMap.length : 0;
 
   return rows.slice().map((item, index) => {
-    let data = []
+    let data = [];
     let result = {
-      type: 'liquidFill'
-    }
+      type: 'liquidFill',
+    };
 
-    let name = item[dimension]
-    let val = Number(item[metrics])
-    let itemMap = {}
+    const name = item[dimension];
+    const val = Number(item[metrics]);
+    let itemMap = {};
 
     if (isArray(seriesMap)) {
-      itemMap = !seriesMap[index] ? seriesMap[len - 1] : seriesMap[index]
+      itemMap = !seriesMap[index] ? seriesMap[len - 1] : seriesMap[index];
     } else if (isObject(seriesMap[name])) {
-      itemMap = seriesMap[name]
+      itemMap = seriesMap[name];
     }
 
     if (isArray(wave) && isArray(wave[0])) {
-      itemWave = isArray(wave[index]) ? wave[index] : wave[wave.length - 1]
+      itemWave = isArray(wave[index]) ? wave[index] : wave[wave.length - 1];
     }
 
     // 根据传入的数据(rows)和额外配置(seriesMap)的数据组合data
-    data.push({ value: val })
+    data.push({ value: val });
     if (itemWave && itemWave.length) {
-      data = data.concat(itemWave.map(val => ({ value: val })))
+      data = data.concat(itemWave.map((val) => ({ value: val })));
     }
 
-    result = Object.assign(result, { data, name }, itemMap)
-    return result
-  })
+    result = Object.assign(result, { data, name }, itemMap);
+    return result;
+  });
 }
 
 export const liquidfill = (columns, rows, settings, extra) => {
@@ -83,30 +62,29 @@ export const liquidfill = (columns, rows, settings, extra) => {
     seriesMap = {},
     dataType = 'percent',
     digit = 2,
-    wave = []
-  } = settings
+    wave = [],
+  } = settings;
 
-  const {
-    tooltipVisible,
-    tooltipFormatter
-  } = extra
+  const { tooltipVisible, tooltipFormatter } = extra;
 
-  const tooltip = tooltipVisible && getTooltip({
-    tooltipFormatter,
-    dataType,
-    digit
-  })
+  const tooltip =
+    tooltipVisible &&
+    getTooltip({
+      tooltipFormatter,
+      dataType,
+      digit,
+    });
   const series = getSeries({
     rows,
     columns,
     dimension,
     metrics,
     seriesMap,
-    wave
-  })
+    wave,
+  });
 
   return {
     tooltip,
-    series
-  }
-}
+    series,
+  };
+};

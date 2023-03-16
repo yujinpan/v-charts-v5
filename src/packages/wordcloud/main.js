@@ -1,75 +1,71 @@
-import { isArray } from 'utils-lite'
+import { isArray } from 'utils-lite';
 
-function getSeries (args) {
-  const {
-    dimension,
-    metrics,
-    rows,
-    color,
-    sizeMax,
-    sizeMin,
-    shape
-  } = args
+function getSeries(args) {
+  const { dimension, metrics, rows, color, sizeMax, sizeMin, shape } = args;
 
   const baseType = {
     type: 'wordCloud',
     textStyle: {
       normal: {
-        color: !isArray(color) && !!color ? color : () => {
-          return 'rgb(' + [
-            Math.round(Math.random() * 160),
-            Math.round(Math.random() * 160),
-            Math.round(Math.random() * 160)
-          ].join(',') + ')'
-        }
-      }
+        color:
+          !isArray(color) && !!color
+            ? color
+            : () => {
+                return (
+                  'rgb(' +
+                  [
+                    Math.round(Math.random() * 160),
+                    Math.round(Math.random() * 160),
+                    Math.round(Math.random() * 160),
+                  ].join(',') +
+                  ')'
+                );
+              },
+      },
     },
     shape: shape,
-    sizeRange: [sizeMin, sizeMax]
-  }
+    sizeRange: [sizeMin, sizeMax],
+  };
 
-  const len = isArray(color) ? color.length : 0
-  const data = rows.slice().map(row => {
+  const len = isArray(color) ? color.length : 0;
+  const data = rows.slice().map((row) => {
     const text = {
       name: row[dimension],
-      value: row[metrics]
-    }
+      value: row[metrics],
+    };
 
     if (len > 0) {
       text.textStyle = {
         normal: {
-          color: color[Math.floor(Math.random() * len)]
-        }
-      }
+          color: color[Math.floor(Math.random() * len)],
+        },
+      };
     }
-    return text
-  })
+    return text;
+  });
 
-  baseType.data = data
+  baseType.data = data;
 
-  return [baseType]
+  return [baseType];
 }
 
-function getTooltip (args) {
-  const { tooltipFormatter } = args
+function getTooltip(args) {
+  const { tooltipFormatter } = args;
 
   return {
     show: true,
-    formatter (params) {
+    formatter(params) {
       const {
-        data: {
-          name,
-          value
-        }
-      } = params
+        data: { name, value },
+      } = params;
 
       if (tooltipFormatter) {
-        return tooltipFormatter.apply(null, params)
+        return tooltipFormatter.apply(null, params);
       }
 
-      return `${name}: ${value}`
-    }
-  }
+      return `${name}: ${value}`;
+    },
+  };
 }
 
 export const wordcloud = (columns, rows, settings, extra) => {
@@ -79,19 +75,24 @@ export const wordcloud = (columns, rows, settings, extra) => {
     color = '',
     sizeMax = 60,
     sizeMin = 12,
-    shape = 'circle'
-  } = settings
+    shape = 'circle',
+  } = settings;
 
-  const {
-    tooltipVisible,
-    tooltipFormatter
-  } = extra
+  const { tooltipVisible, tooltipFormatter } = extra;
 
-  const series = getSeries({ dimension, metrics, rows, color, sizeMax, sizeMin, shape })
-  const tooltip = tooltipVisible && getTooltip({ tooltipFormatter })
+  const series = getSeries({
+    dimension,
+    metrics,
+    rows,
+    color,
+    sizeMax,
+    sizeMin,
+    shape,
+  });
+  const tooltip = tooltipVisible && getTooltip({ tooltipFormatter });
 
   return {
     series,
-    tooltip
-  }
-}
+    tooltip,
+  };
+};

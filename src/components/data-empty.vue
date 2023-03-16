@@ -1,7 +1,5 @@
 <template>
-  <div class="v-charts-data-empty">
-    暂无数据
-  </div>
+  <div class="v-charts-data-empty">暂无数据</div>
 </template>
 
 <style>
@@ -14,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   color: #888;
   font-size: 14px;
 }
