@@ -6,45 +6,53 @@ export default {
       name: '简单水球图',
       data: {
         columns: ['city', 'percent'],
-        rows: [{
-          city: '上海',
-          percent: 0.633333
-        }]
+        rows: [
+          {
+            city: '上海',
+            percent: 0.633333,
+          },
+        ],
       },
-      settings: {}
+      settings: {},
     },
     {
       name: '分层水球图',
       data: {
         columns: ['city', 'percent'],
-        rows: [{
-          city: '上海',
-          percent: 0.7
-        }]
+        rows: [
+          {
+            city: '上海',
+            percent: 0.7,
+          },
+        ],
       },
       settings: {
         wave: [0.5, 0.3, 0.1],
         seriesMap: {
-          '上海': {
-            color: ['red', 'green', 'yellow']
-          }
-        }
-      }
+          上海: {
+            color: ['red', 'green', 'yellow'],
+          },
+        },
+      },
     },
     {
       name: '多个水球图',
       data: {
         columns: ['city', 'percent'],
-        rows: [{
-          city: '上海',
-          percent: 0.6
-        }, {
-          city: '广州',
-          percent: 0.4
-        }, {
-          city: '成都',
-          percent: 0.9
-        }]
+        rows: [
+          {
+            city: '上海',
+            percent: 0.6,
+          },
+          {
+            city: '广州',
+            percent: 0.4,
+          },
+          {
+            city: '成都',
+            percent: 0.9,
+          },
+        ],
       },
       settings: {
         wave: [[0.5, 0.3, 0.1], [0.3, 0.2], []],
@@ -52,99 +60,98 @@ export default {
           {
             color: ['red', 'green', 'yellow'],
             label: {
-              formatter (options) {
+              formatter(options) {
                 const {
                   seriesName,
-                  data: {
-                    value
-                  }
-                } = options
-                return `${seriesName}\n${value}`
+                  data: { value },
+                } = options;
+                return `${seriesName}\n${value}`;
               },
-              fontSize: 30
+              fontSize: 30,
             },
             center: ['18%', '50%'],
-            radius: '50%'
+            radius: '50%',
           },
           {
             label: {
-              formatter (options) {
-                return `${options.seriesName}\n${options.data.value}`
+              formatter(options) {
+                return `${options.seriesName}\n${options.data.value}`;
               },
-              fontSize: 30
+              fontSize: 30,
             },
             center: ['50%', '50%'],
-            radius: '50%'
+            radius: '50%',
           },
           {
             label: {
-              fontSize: 30
+              fontSize: 30,
             },
             center: ['80%', '50%'],
-            radius: '50%'
-          }
-        ]
-      }
+            radius: '50%',
+          },
+        ],
+      },
     },
     {
       name: '水球图的形状',
       data: {
         columns: ['city', 'percent'],
-        rows: [{
-          city: '上海',
-          percent: 0.6
-        }]
+        rows: [
+          {
+            city: '上海',
+            percent: 0.6,
+          },
+        ],
       },
       settings: {
         seriesMap: {
-          '上海': {
-            shape: 'rect'
-          }
-        }
-      }
+          上海: {
+            shape: 'rect',
+          },
+        },
+      },
     },
     {
       name: '水球图文字标签及样式设置',
       data: {
         columns: ['city', 'percent'],
-        rows: [{
-          city: '上海',
-          percent: 0.6,
-          val: 0.8
-        }]
+        rows: [
+          {
+            city: '上海',
+            percent: 0.6,
+            val: 0.8,
+          },
+        ],
       },
       settings: {
         dimension: 'city',
         metrics: 'val',
         seriesMap: {
-          '上海': {
+          上海: {
             color: ['red'],
             itemStyle: {
-              opacity: 0.2
+              opacity: 0.2,
             },
             emphasis: {
               itemStyle: {
-                opacity: 0.8
-              }
+                opacity: 0.8,
+              },
             },
             backgroundStyle: {
-              color: 'yellow'
+              color: 'yellow',
             },
             label: {
-              formatter (options) {
-                const {
-                  seriesName,
-                  value
-                } = options
-                return `${seriesName}\n${value * 100}%`
+              formatter(options) {
+                const { seriesName, value } = options;
+                return `${seriesName}\n${value * 100}%`;
               },
               fontSize: 40,
               color: 'green',
-              insideColor: 'red'
-            }
-          }
-        }
-      }
-    }
-  ]
-}
+              insideColor: 'red',
+            },
+          },
+        },
+      },
+    },
+  ],
+};

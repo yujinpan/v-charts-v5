@@ -4,7 +4,8 @@
       :settings="chartSettings"
       :series="chartSeries"
       :after-set-option-once="getMap"
-      :mark-line="markLine">
+      :mark-line="markLine"
+    >
     </ve-bmap>
     <button @click="markLine = {}">toggle</button>
     <button @click="add">add</button>
@@ -12,10 +13,11 @@
 </template>
 
 <script>
-import VeBmap from '../../src/packages/bmap'
+import VeBmap from '../../src/packages/bmap';
+
 export default {
   name: 'bmap',
-  data () {
+  data() {
     return {
       chartSettings: {
         key: 'oBvDtR6nzWtVchkY4cLHtnah1VVZQKRK',
@@ -25,8 +27,8 @@ export default {
           center: [120, 30],
           zoom: 14,
           roam: true,
-          mapStyle: {}
-        }
+          mapStyle: {},
+        },
       },
       chartSeries: [
         {
@@ -34,25 +36,25 @@ export default {
           coordinateSystem: 'bmap',
           data: [
             [120, 30.0000001, 5],
-            [120, 30.0000002, 5]
-          ]
-        }
+            [120, 30.0000002, 5],
+          ],
+        },
       ],
-      markLine: {}
-    }
+      markLine: {},
+    };
   },
 
   methods: {
-    getMap (echarts) {
-      const bmap = echarts.getModel().getComponent('bmap').getBMap()
-      bmap.addControl(new window.BMap.MapTypeControl())
+    getMap(echarts) {
+      const bmap = echarts.getModel().getComponent('bmap').getBMap();
+      bmap.addControl(new window.BMap.MapTypeControl());
     },
 
-    add () {
-      this.chartSeries[0].data.push([120, 30.2, 1])
-    }
+    add() {
+      this.chartSeries[0].data.push([120, 30.2, 1]);
+    },
   },
 
-  components: { VeBmap }
-}
+  components: { VeBmap },
+};
 </script>

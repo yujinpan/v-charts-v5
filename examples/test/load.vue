@@ -6,21 +6,22 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from '../test/data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     return {
-      chartData: []
-    }
+      chartData: [],
+    };
   },
   methods: {
-    load () {
-      setTimeout(_ => {
-        this.chartData = LINE_DATA
-      }, 1000)
-    }
+    load() {
+      setTimeout((_) => {
+        this.chartData = LINE_DATA;
+      }, 1000);
+    },
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

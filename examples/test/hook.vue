@@ -16,44 +16,46 @@
       @ready="ready"
       @ready-once="readyOnve"
       :data="chartData"
-      :settings="chartSettings">
+      :settings="chartSettings"
+    >
     </ve-line>
     <button @click="chartSettings = {}">trigger change</button>
   </div>
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     return {
       chartData: LINE_DATA,
-      chartSettings: {}
-    }
+      chartSettings: {},
+    };
   },
   methods: {
-    beforeConfig () {
-      console.log('beforeConfig', arguments)
-      return arguments[0]
+    beforeConfig() {
+      console.log('beforeConfig', arguments);
+      return arguments[0];
     },
-    afterConfig () {
-      console.log('afterConfig', arguments)
-      return arguments[0]
+    afterConfig() {
+      console.log('afterConfig', arguments);
+      return arguments[0];
     },
-    afterSetOption () {
-      console.log('afterSetOption', arguments)
+    afterSetOption() {
+      console.log('afterSetOption', arguments);
     },
-    afterSetOptionOnce () {
-      console.log('afterSetOptionOnce', arguments)
+    afterSetOptionOnce() {
+      console.log('afterSetOptionOnce', arguments);
     },
-    ready () {
-      console.log('ready', arguments)
+    ready() {
+      console.log('ready', arguments);
     },
-    readyOnve () {
-      console.log('readyOnve', arguments)
-    }
+    readyOnve() {
+      console.log('readyOnve', arguments);
+    },
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

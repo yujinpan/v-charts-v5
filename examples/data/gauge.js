@@ -6,61 +6,53 @@ export default {
       name: '简单仪表盘',
       data: {
         columns: ['type', 'value'],
-        rows: [
-          { type: '油量', value: 123 }
-        ]
+        rows: [{ type: '油量', value: 123 }],
       },
-      settings: {}
+      settings: {},
     },
     {
       name: '设置指标维度',
       data: {
         columns: ['a', 'b', 'type', 'value'],
-        rows: [
-          { type: '油量', value: 123, a: 1, b: 2 }
-        ]
+        rows: [{ type: '油量', value: 123, a: 1, b: 2 }],
       },
       settings: {
         dimension: 'type',
-        metrics: 'value'
-      }
+        metrics: 'value',
+      },
     },
     {
       name: '设置数据类型',
       data: {
         columns: ['type', 'value'],
-        rows: [
-          { type: '油量', value: 0.12 }
-        ]
+        rows: [{ type: '油量', value: 0.12 }],
       },
       settings: {
         dataType: {
-          '油量': 'percent'
+          油量: 'percent',
         },
         seriesMap: {
-          '油量': {
+          油量: {
             min: 0,
-            max: 1
-          }
-        }
-      }
+            max: 1,
+          },
+        },
+      },
     },
     {
       name: '设置别名',
       data: {
         columns: ['type', 'value'],
-        rows: [
-          { type: 'speed', value: 123 }
-        ]
+        rows: [{ type: 'speed', value: 123 }],
       },
       settings: {
         labelMap: {
-          speed: '速度'
+          speed: '速度',
         },
         dataName: {
-          speed: 'km/h'
-        }
-      }
+          speed: 'km/h',
+        },
+      },
     },
     {
       name: '多个仪表盘',
@@ -68,23 +60,23 @@ export default {
         columns: ['type', 'value'],
         rows: [
           { type: '油量', value: 2343 },
-          { type: '速度', value: 123 }
-        ]
+          { type: '速度', value: 123 },
+        ],
       },
       settings: {
         seriesMap: {
-          '油量': {
+          油量: {
             radius: 90,
             center: ['25%', '55%'],
             min: 0,
-            max: 10000
+            max: 10000,
           },
-          '速度': {
+          速度: {
             radius: 90,
-            center: ['75%', '55%']
-          }
-        }
-      }
-    }
-  ]
-}
+            center: ['75%', '55%'],
+          },
+        },
+      },
+    },
+  ],
+};

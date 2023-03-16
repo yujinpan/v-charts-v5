@@ -11,48 +11,52 @@
       :data="chartData"
       class="custom-class"
       width="300px"
-      height="300px">
+      height="300px"
+    >
     </ve-line>
     <button @click="changeSettings">trigger change</button>
-    <br>
+    <br />
     change delay 0
     <ve-line
       :data="chartData"
       :after-config="afterConfig"
-      :settings="chartSettings">
+      :settings="chartSettings"
+    >
     </ve-line>
     change delay 1000
     <ve-line
       :data="chartData"
       :after-config="afterConfig.bind(this, 1)"
       :change-delay="1000"
-      :settings="chartSettings">
+      :settings="chartSettings"
+    >
     </ve-line>
   </div>
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     return {
       chartData: LINE_DATA,
-      chartSettings: {}
-    }
+      chartSettings: {},
+    };
   },
   methods: {
-    changeSettings () {
-      this.timer = Date.now()
-      console.log('触发 watch')
-      this.chartSettings = { yAxisType: ['0.0a'] }
+    changeSettings() {
+      this.timer = Date.now();
+      console.log('触发 watch');
+      this.chartSettings = { yAxisType: ['0.0a'] };
     },
-    afterConfig () {
-      console.log(arguments)
-      console.log('绘制延迟时间', Date.now() - (this.timer || Date.now()))
-      return arguments[arguments.length - 1]
-    }
+    afterConfig() {
+      console.log(arguments);
+      console.log('绘制延迟时间', Date.now() - (this.timer || Date.now()));
+      return arguments[arguments.length - 1];
+    },
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

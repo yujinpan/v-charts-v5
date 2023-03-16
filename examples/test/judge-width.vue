@@ -10,20 +10,21 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     return {
       chartData: LINE_DATA,
       style: {
-        width: 0
-      }
-    }
+        width: 0,
+      },
+    };
   },
-  mounted () {
-    this.style.width = '400px'
+  mounted() {
+    this.style.width = '400px';
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

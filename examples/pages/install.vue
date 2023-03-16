@@ -1,3 +1,3 @@
 <template>
-  <div>v-charts</div>  
+  <div>v-charts</div>
 </template>

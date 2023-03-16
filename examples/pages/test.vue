@@ -5,14 +5,15 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from '../test/data'
+import { VeLine } from '@/index';
+import { LINE_DATA } from '../test/data';
+
 export default {
-  data () {
+  data() {
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

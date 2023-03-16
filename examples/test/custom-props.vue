@@ -24,7 +24,11 @@
   -->
   <div>
     grid backgroundColor
-    <ve-line :data="chartData" :grid="chartGrid" background-color="#eee"></ve-line>
+    <ve-line
+      :data="chartData"
+      :grid="chartGrid"
+      background-color="#eee"
+    ></ve-line>
     <ve-line :data="chartData" :grid="chartGrid1"></ve-line>
     colors
     <ve-line :data="chartData" :colors="chartColors"></ve-line>
@@ -50,33 +54,30 @@
       :graphic="graphic"
       :series="series"
       :text-style="textStyle"
-      :after-config="afterConfig">
+      :after-config="afterConfig"
+    >
     </ve-line>
   </div>
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
-import 'echarts/lib/component/visualMap'
-import 'echarts/lib/component/dataZoom'
-import 'echarts/lib/component/toolbox'
-import 'echarts/lib/component/title'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
 
 export default {
-  data () {
-    this.chartGrid = { right: '50%' }
-    this.chartGrid1 = [this.chartGrid]
-    this.chartColors = ['red', 'blue']
-    this.visualMap = [{ type: 'continuous' }]
+  data() {
+    this.chartGrid = { right: '50%' };
+    this.chartGrid1 = [this.chartGrid];
+    this.chartColors = ['red', 'blue'];
+    this.visualMap = [{ type: 'continuous' }];
     this.dataZoom = [
       {
         id: 'dataZoomX',
         type: 'slider',
         xAxisIndex: [0],
-        filterMode: 'filter'
-      }
-    ]
+        filterMode: 'filter',
+      },
+    ];
     this.toolbox = {
       show: true,
       feature: {
@@ -84,40 +85,39 @@ export default {
         dataView: { readOnly: false },
         magicType: { type: ['line', 'bar'] },
         restore: {},
-        saveAsImage: {}
-      }
-    }
+        saveAsImage: {},
+      },
+    };
     this.title = {
       textAlign: 'left',
       text: 'chart-title',
       textStyle: {
         fontSize: 12,
-        fontWeight: 'normal'
-      }
-    }
-    this.legend = {}
-    this.xAxis = {}
-    this.yAxis = {}
-    this.radar = {}
-    this.tooltip = {}
-    this.axisPointer = {}
-    this.brush = {}
-    this.geo = {}
-    this.timeline = {}
-    this.graphic = {}
-    this.series = {}
-    this.textStyle = {}
+        fontWeight: 'normal',
+      },
+    };
+    this.legend = {};
+    this.xAxis = {};
+    this.yAxis = {};
+    this.radar = {};
+    this.tooltip = {};
+    this.axisPointer = {};
+    this.brush = {};
+    this.geo = {};
+    this.timeline = {};
+    this.graphic = {};
+    this.series = {};
+    this.textStyle = {};
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
   methods: {
-    afterConfig (v) {
-      console.log(v)
-      return v
-    }
+    afterConfig(v) {
+      console.log(v);
+      return v;
+    },
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>
-

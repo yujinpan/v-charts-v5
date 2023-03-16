@@ -1,9 +1,6 @@
 <template>
   <div class="component-sidebar">
-    <div
-      class="main-section"
-      v-for="(menu, title) in menus"
-      :key="title">
+    <div class="main-section" v-for="(menu, title) in menus" :key="title">
       <span class="main-title">{{ title }}</span>
       <ul class="sidebar-ul">
         <li class="sidebar-li" v-for="(item, index) in menu" :key="index">
@@ -15,30 +12,30 @@
 </template>
 
 <script>
-import chartData from '../data/index'
-import { TEST_ROUTES } from '../router'
+import chartData from '../data/index';
+import { TEST_ROUTES } from '../router';
 
 const routerInfo = {
-  '图表': Object.keys(chartData).map(key => {
+  图表: Object.keys(chartData).map((key) => {
     return {
       name: chartData[key].name,
-      url: `/chart/${chartData[key].type}`
-    }
+      url: `/chart/${chartData[key].type}`,
+    };
   }),
-  '其他': [
+  其他: [
     { name: '百度地图', url: '/bmap' },
-    { name: '高德地图', url: '/amap' }
+    { name: '高德地图', url: '/amap' },
   ],
-  '测试示例': TEST_ROUTES.map(({ name, path }) => ({ name, url: path }))
-}
+  测试示例: TEST_ROUTES.map(({ name, path }) => ({ name, url: path })),
+};
 
 export default {
   name: 'Sidebar',
 
-  created () {
-    this.menus = routerInfo
-  }
-}
+  created() {
+    this.menus = routerInfo;
+  },
+};
 </script>
 
 <style lang="less">

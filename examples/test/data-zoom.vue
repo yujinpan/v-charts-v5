@@ -5,36 +5,33 @@
     <ve-line
       :data="chartData"
       :not-set-unchange="['dataZoom']"
-      :data-zoom="dataZoom">
+      :data-zoom="dataZoom"
+    >
     </ve-line>
-    <ve-line
-      :data="chartData"
-      :data-zoom="dataZoom">
-    </ve-line>
+    <ve-line :data="chartData" :data-zoom="dataZoom"> </ve-line>
   </div>
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA, LINE_DATA1 } from '../test/data'
+import { LINE_DATA, LINE_DATA1 } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
-    this.unchange = ['dataZoom']
+  data() {
+    this.unchange = ['dataZoom'];
     return {
       chartData: LINE_DATA,
-      dataZoom: { start: 20, end: 100 }
-    }
+      dataZoom: { start: 20, end: 100 },
+    };
   },
   methods: {
-    change () {
-      this.chartData = this.chartData === LINE_DATA
-        ? LINE_DATA1
-        : LINE_DATA
+    change() {
+      this.chartData = this.chartData === LINE_DATA ? LINE_DATA1 : LINE_DATA;
     },
-    changeDataZoom () {
-      this.dataZoom.start = this.dataZoom.start === 20 ? 50 : 20
-    }
+    changeDataZoom() {
+      this.dataZoom.start = this.dataZoom.start === 20 ? 50 : 20;
+    },
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

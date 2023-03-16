@@ -3,34 +3,37 @@
     <ve-line
       :set-option-opts="false"
       :data="chartData"
-      :data-zoom="chartDataZoom">
+      :data-zoom="chartDataZoom"
+    >
     </ve-line>
     <button @click="change">change</button>
   </div>
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from '../test/data'
-import 'echarts/lib/component/dataZoom'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
-    this.chartDataZoom = [{
-      type: 'slider'
-    }]
+  data() {
+    this.chartDataZoom = [
+      {
+        type: 'slider',
+      },
+    ];
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
   methods: {
-    change () {
+    change() {
       this.chartData.rows.push({
-        '日期': '1/1',
-        '访问用户': Math.random() * 1000,
-        '下单用户': Math.random() * 1000
-      })
-    }
+        日期: '1/1',
+        访问用户: Math.random() * 1000,
+        下单用户: Math.random() * 1000,
+      });
+    },
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

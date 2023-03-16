@@ -9,37 +9,37 @@
     <ve-line :data="chartData" :theme="theme"></ve-line>
     themeName
     <ve-line :data="chartData" theme-name="test"></ve-line>
-    initOptions  svg
+    initOptions svg
     <ve-line :data="chartData" :init-options="initOptions"></ve-line>
   </div>
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
-import echarts from 'echarts/lib/echarts'
-import 'zrender/lib/svg/svg'
+import { registerTheme } from 'echarts';
 
-echarts.registerTheme('test', {
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
+registerTheme('test', {
   line: {
-    smooth: false
-  }
-})
+    smooth: false,
+  },
+});
 
 export default {
-  data () {
+  data() {
     this.theme = {
       line: {
-        smooth: false
-      }
-    }
+        smooth: false,
+      },
+    };
     this.initOptions = {
-      renderer: 'svg'
-    }
+      renderer: 'svg',
+    };
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

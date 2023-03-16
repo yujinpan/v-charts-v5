@@ -12,16 +12,17 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     return {
       chartData: LINE_DATA,
       loading: false,
-      dataEmpty: false
-    }
+      dataEmpty: false,
+    };
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

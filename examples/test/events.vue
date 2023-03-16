@@ -8,19 +8,20 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     this.events = {
-      click (v) {
-        console.log('v', v)
-      }
-    }
+      click(v) {
+        console.log('v', v);
+      },
+    };
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

@@ -13,57 +13,50 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
-import 'echarts/lib/component/markLine'
-import 'echarts/lib/component/markPoint'
-import 'echarts/lib/component/markArea'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
 
 export default {
-  data () {
+  data() {
     this.markLine = {
-      data: [
-        { name: '平均线', type: 'average' }
-      ]
-    }
+      data: [{ name: '平均线', type: 'average' }],
+    };
     this.markPoint = {
       data: [
         {
           name: '最大值',
-          type: 'max'
-        }
-      ]
-    }
+          type: 'max',
+        },
+      ],
+    };
     this.markArea = {
       data: [
         [
           {
             name: '平均值到最大值',
-            type: 'average'
+            type: 'average',
           },
           {
-            type: 'max'
-          }
-        ]
-      ]
-    }
+            type: 'max',
+          },
+        ],
+      ],
+    };
     this.chartExtend = {
-      series (item) {
+      series(item) {
         item[0].markLine = {
           label: {
-            position: 'middle'
+            position: 'middle',
           },
-          data: [
-            { name: '平均线', type: 'average' }
-          ]
-        }
-        return item
-      }
-    }
+          data: [{ name: '平均线', type: 'average' }],
+        };
+        return item;
+      },
+    };
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

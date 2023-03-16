@@ -10,34 +10,37 @@
 </template>
 
 <script>
-import { VeLine } from '../../src/index.es'
-import { LINE_DATA } from './data'
+import { LINE_DATA } from './data';
+import { VeLine } from '@/index';
+
 export default {
-  data () {
+  data() {
     this.extend = {
       series: {
-        smooth: false
-      }
-    }
+        smooth: false,
+      },
+    };
     this.extend1 = {
-      series (v) {
-        v.map(item => { item.smooth = false })
-        return v
-      }
-    }
+      series(v) {
+        v.map((item) => {
+          item.smooth = false;
+        });
+        return v;
+      },
+    };
     this.extend2 = {
       'series.1.smooth': false,
-      'series.0.symbol': 'rect'
-    }
+      'series.0.symbol': 'rect',
+    };
     this.settings = {
       axisSite: {
-        right: ['下单用户']
-      }
-    }
+        right: ['下单用户'],
+      },
+    };
     return {
-      chartData: LINE_DATA
-    }
+      chartData: LINE_DATA,
+    };
   },
-  components: { VeLine }
-}
+  components: { VeLine },
+};
 </script>

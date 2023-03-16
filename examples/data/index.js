@@ -1,21 +1,21 @@
-import bar from './bar'
-import histogram from './histogram'
-import line from './line'
-import pie from './pie'
-import ring from './ring'
-import waterfall from './waterfall'
-import funnel from './funnel'
-import radar from './radar'
-import chart from './chart'
-import map from './map'
-import sankey from './sankey'
-import heatmap from './heatmap'
-import scatter from './scatter'
-import candle from './candle'
-import gauge from './gauge'
-import tree from './tree'
-import liquidfill from './liquidfill'
-import wordcloud from './wordcloud'
+import bar from './bar';
+import candle from './candle';
+import chart from './chart';
+import funnel from './funnel';
+import gauge from './gauge';
+import heatmap from './heatmap';
+import histogram from './histogram';
+import line from './line';
+import liquidfill from './liquidfill';
+import map from './map';
+import pie from './pie';
+import radar from './radar';
+import ring from './ring';
+import sankey from './sankey';
+import scatter from './scatter';
+import tree from './tree';
+import waterfall from './waterfall';
+import wordcloud from './wordcloud';
 
 export default {
   bar,
@@ -35,5 +35,5 @@ export default {
   gauge,
   tree,
   liquidfill,
-  wordcloud
-}
+  wordcloud,
+};

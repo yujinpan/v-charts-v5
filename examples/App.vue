@@ -12,17 +12,17 @@
 </template>
 
 <script>
-import Sidebar from './components/sidebar'
+import Sidebar from './components/sidebar';
+
 export default {
   name: 'App',
 
-  created () {
-  },
+  created() {},
 
   components: {
-    Sidebar
-  }
-}
+    Sidebar,
+  },
+};
 </script>
 
 <style lang="less">
@@ -30,7 +30,8 @@ export default {
   padding: 0;
   margin: 0;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 

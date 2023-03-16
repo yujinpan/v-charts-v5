@@ -1,15 +1,14 @@
-import App from './App'
-import Vue from 'vue'
-import router from './router'
+import Vue from 'vue';
 
-import CodeSection from './components/code-section'
+import App from './App';
+import CodeSection from './components/code-section';
+import router from './router';
 
-Vue.component(CodeSection.name, CodeSection)
+Vue.component(CodeSection.name, CodeSection);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App/>',
+  render: (h) => h(App),
   router,
-  components: { App }
-})
+});
