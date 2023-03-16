@@ -4,14 +4,16 @@
   "description": "Vue Echarts Components",
   "main": "lib/index.js",
   "module": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
     "publish:beta": "npm version prerelease --preid=beta && npm publish",
     "publish:patch": "npm version patch && npm publish",
-    "version": "npm run build && git add -A dist",
+    "version": "npm run build",
     "postversion": "git push --all && git push --tags",
     "docs:publish": "npm run build:example && sh deploy.sh",
     "start": "npm run dev",
