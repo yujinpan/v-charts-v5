@@ -8,7 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Depoly
+      - uses: actions/checkout@v2
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
