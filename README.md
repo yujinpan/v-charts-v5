@@ -1,4 +1,4 @@
-# v-charts-v5
+# v-charts-x
 
 - support echarts@5
 - upgrade dev to vite@3
@@ -9,7 +9,7 @@
 ## Usage
 
 ```shell
-npm i echarts v-charts-v5
+npm i echarts v-charts-x
 ```
 
 ## Next

@@ -1,5 +1,5 @@
 {
-  "name": "v-charts-v5",
+  "name": "v-charts-x",
   "version": "1.0.1",
   "description": "Vue Echarts Components",
   "main": "lib/index.js",
@@ -28,9 +28,9 @@
   "author": "yujinpan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yujinpan/v-charts-v5/issues"
+    "url": "https://github.com/yujinpan/v-charts-x/issues"
   },
-  "homepage": "https://github.com/yujinpan/v-charts-v5#readme",
+  "homepage": "https://github.com/yujinpan/v-charts-x#readme",
   "peerDependencies": {
     "echarts": ">5.0.0",
     "vue": ">2.0.0"
