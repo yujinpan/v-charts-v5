@@ -1,6 +1,6 @@
 # Bmap/Amap
 
-To make it easier to use the Baidu / Gauteng maps on echarts, v-charts package a 'shell' of a Baidu / Gauteng map, add settings about the chart's settings (key, bmap, amap) Set directly on the series, tooltip, etc., can be generated to Baidu / Germany map as the coordinate system Echarts chart.
+To make it easier to use the Baidu / Gauteng maps on echarts, v-charts-x package a 'shell' of a Baidu / Gauteng map, add settings about the chart's settings (key, bmap, amap) Set directly on the series, tooltip, etc., can be generated to Baidu / Germany map as the coordinate system Echarts chart.
 
 #### Example
 

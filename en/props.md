@@ -62,8 +62,6 @@ Load state and no data state can be achieved in the parent component by switchin
 | ----- | --- |:----:| --- |
 | loading | loading status | boolean | false |
 | data-empty | no data status | boolean | false |
-?> **import styles first**
-<br>`import 'v-charts/lib/style.css'`
 
 
 #### hook attribute

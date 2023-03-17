@@ -1,6 +1,6 @@
 # 百度/高德地图
 
-为了使在echarts上更简单的使用百度/高德地图，v-charts封装了一个百度/高德地图的‘壳子’，在settings中添加关于图表的配置（key,bmap,amap），在组件上直接设置 series, tooltip 等，便可生成以百度/高德地图为坐标系的 Echarts 图表。
+为了使在echarts上更简单的使用百度/高德地图，v-charts-x封装了一个百度/高德地图的‘壳子’，在settings中添加关于图表的配置（key,bmap,amap），在组件上直接设置 series, tooltip 等，便可生成以百度/高德地图为坐标系的 Echarts 图表。
 
 #### 百度地图
 

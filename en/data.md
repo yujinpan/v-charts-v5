@@ -2,7 +2,7 @@
 
 ### Metrics ans Dimension
 
-The v-charts data consists of Metrics and dimension. Take a set of common data as an example:
+The v-charts-x data consists of Metrics and dimension. Take a set of common data as an example:
 
 | date | PV | Order |
 | :--: | --: | --: |
@@ -43,7 +43,7 @@ Next, take the above set of data as an example to draw a line chart:
 
 ### Set metrics or dimension
 
-A typical v-charts `data` attribute data format is as follows:
+A typical v-charts-x `data` attribute data format is as follows:
 
 ```js
 {
@@ -56,7 +56,7 @@ A typical v-charts `data` attribute data format is as follows:
 }
 ```
 
-- columns: Columns are a collection of dimension name and metrics name. Most of the charts in v-charts are single-dimension and multi-metrics, so by default the first is dimension, and the remaining values are metrics.
+- columns: Columns are a collection of dimension name and metrics name. Most of the charts in v-charts-x are single-dimension and multi-metrics, so by default the first is dimension, and the remaining values are metrics.
 - rows: A collection of data in rows.
 
 There are two configurations in the setting property of the chart:

@@ -113,8 +113,6 @@
 </template>
 
 <script>
-  // 使用loading属性前先引入css
-  // import 'v-charts/lib/style.css'
   export default {
     data () {
       return {
@@ -149,8 +147,6 @@
 </template>
 
 <script>
-  // 使用data-empty属性前先引入css
-  // import 'v-charts/lib/style.css'
   export default {
     data () {
       return {
