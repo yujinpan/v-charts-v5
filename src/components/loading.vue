@@ -1,5 +1,5 @@
 <template>
-  <div class="v-charts-component-loading">
+  <div class="v-charts-x-component-loading">
     <div class="loader">
       <div class="loading-spinner">
         <svg class="circular" viewBox="25 25 50 50">
@@ -11,7 +11,7 @@
 </template>
 
 <style>
-.v-charts-component-loading {
+.v-charts-x-component-loading {
   position: absolute;
   left: 0;
   right: 0;
@@ -23,17 +23,17 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.v-charts-mask-status {
+.v-charts-x-mask-status {
   filter: blur(1px);
 }
 
-.v-charts-component-loading .circular {
+.v-charts-x-component-loading .circular {
   width: 42px;
   height: 42px;
   animation: loading-rotate 2s linear infinite;
 }
 
-.v-charts-component-loading .path {
+.v-charts-x-component-loading .path {
   animation: loading-dash 1.5s ease-in-out infinite;
   stroke-dasharray: 90, 150;
   stroke-dashoffset: 0;

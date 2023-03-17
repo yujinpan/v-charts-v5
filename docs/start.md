@@ -8,7 +8,7 @@
 ```js
 // main.js
 import Vue from 'vue'
-import VCharts from 'v-charts'
+import VCharts from 'v-charts-x'
 import App from './App.vue'
 
 Vue.use(VCharts)
@@ -46,7 +46,7 @@ v-charts的每种图表组件，都已经单独打包到lib文件夹下了
 使用时，可以直接将单个图表引入到项目中
 ```js
 import Vue from 'vue'
-import VeLine from 'v-charts/lib/line.common'
+import VeLine from 'v-charts-x/lib/line.common'
 import App from './App.vue'
 
 Vue.component(VeLine.name, VeLine)

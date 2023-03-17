@@ -37,7 +37,7 @@ export default {
       [
         h('div', {
           style: this.canvasStyle,
-          class: { 'v-charts-mask-status': this.dataEmpty || this.loading },
+          class: { 'v-charts-x-mask-status': this.dataEmpty || this.loading },
           ref: 'canvas',
         }),
         h(DataEmpty, {

@@ -1,12 +1,12 @@
 
 # Introduction
 
-When using [echarts](http://echarts.baidu.com) to generate charts, we often need to do cumbersome data scheme conversion, modify complex configuration items, v-charts precisely to solve this. v-charts is based on Vue2.x and echarts, just need to provide a friendly data scheme and set simple configuration items, you can easily generate common charts.
+When using [echarts](http://echarts.baidu.com) to generate charts, we often need to do cumbersome data scheme conversion, modify complex configuration items, v-charts-x precisely to solve this. v-charts-x is based on Vue2.x and echarts, just need to provide a friendly data scheme and set simple configuration items, you can easily generate common charts.
 
 ### npm
 
 ```
-npm i v-charts echarts -S
+npm i v-charts-x echarts -S
 ```
 
 ### cdn
@@ -14,8 +14,7 @@ npm i v-charts echarts -S
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/v-charts/lib/index.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-charts/lib/style.min.css">
+<script src="https://cdn.jsdelivr.net/npm/v-charts-x/lib/index.min.js"></script>
 ```
 
 > when using bmap or amap need to add additional modules
@@ -31,7 +30,7 @@ npm i v-charts echarts -S
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>v-charts</title>
+  <title>v-charts-x</title>
 </head>
 <body>
   <div id="app">
@@ -39,8 +38,8 @@ npm i v-charts echarts -S
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/v-charts/lib/index.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-charts/lib/style.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-charts-x/lib/index.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-charts-x/lib/style.min.css">
   <script>
     new Vue({
       el: '#app',
@@ -73,7 +72,7 @@ npm i v-charts echarts -S
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>v-charts</title>
+  <title>v-charts-x</title>
 </head>
 <body>
   <div id="app">
@@ -81,9 +80,7 @@ npm i v-charts echarts -S
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/v-charts/lib/line.min.js"></script>
-  <!-- -------------------------------------------------△△△△------------ -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-charts/lib/style.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-charts-x/lib/line.min.js"></script>
   <script>
     new Vue({
       el: '#app',

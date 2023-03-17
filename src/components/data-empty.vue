@@ -1,9 +1,9 @@
 <template>
-  <div class="v-charts-data-empty">暂无数据</div>
+  <div class="v-charts-x-data-empty">暂无数据</div>
 </template>
 
 <style>
-.v-charts-data-empty {
+.v-charts-x-data-empty {
   position: absolute;
   left: 0;
   right: 0;

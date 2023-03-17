@@ -113,8 +113,6 @@
 </template>
 
 <script>
-  // import css first
-  // import 'v-charts/lib/style.css'
   export default {
     data () {
       return {
@@ -149,8 +147,6 @@
 </template>
 
 <script>
-  // import css first
-  // import 'v-charts/lib/style.css'
   export default {
     data () {
       return {

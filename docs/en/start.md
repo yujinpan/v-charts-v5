@@ -6,7 +6,7 @@
 ```js
 // main.js
 import Vue from 'vue'
-import VCharts from 'v-charts'
+import VCharts from 'v-charts-x'
 import App from './App.vue'
 
 Vue.use(VCharts)
@@ -20,7 +20,7 @@ new Vue({
 ### On demand
 -----
 
-Each chart component of v-charts is individually packaged under the lib folder
+Each chart component of v-charts-x is individually packaged under the lib folder
 
 ```
 |- lib/
@@ -47,7 +47,7 @@ When used, a single chart component can be directly import into the project.
 
 ```js
 import Vue from 'vue'
-import VeLine from 'v-charts/lib/line.common'
+import VeLine from 'v-charts-x/lib/line.common'
 import App from './App.vue'
 
 Vue.component(VeLine.name, VeLine)

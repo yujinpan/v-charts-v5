@@ -58,7 +58,7 @@ call the echarts resize function.
 
 #### Decimal display accuracy
 
-By default, v-charts retain two significant digits when working with data types, but when the number is small and is set as a percentage type, this can cause display issues such as
+By default, v-charts-x retain two significant digits when working with data types, but when the number is small and is set as a percentage type, this can cause display issues such as
 
 <vuep template="#error-digit"></vuep>
 
