@@ -15,7 +15,6 @@
     "publish:patch": "npm version patch && npm publish",
     "version": "npm run build",
     "postversion": "git push --all && git push --tags",
-    "docs:publish": "npm run build:example && sh deploy.sh",
     "start": "npm run dev",
     "dev": "vite",
     "build": "rollupx",
